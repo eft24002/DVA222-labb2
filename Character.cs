@@ -5,7 +5,7 @@ namespace RpgCharacters
     public sealed class Character
     {
         private double xp;
-        private double hp;
+        private double hp; //kan inte hp vara en int?
 
         public string Name { get; }
         public IRace Race { get; }
@@ -15,7 +15,7 @@ namespace RpgCharacters
 
         public int Hp
         {
-            get => (int)hp;
+            get => (int)hp;//då slipper vi konvertera varje gång vi vill skriva ut hp
             set
             {
                 if (value < 0 || value > MaxHp)

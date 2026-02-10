@@ -5,7 +5,7 @@ namespace RpgCharacters
     public interface ICategory
     {
         string Name { get; }
-        double InitialXp{ get; }
+        double InitialXp { get; }
 
         string GetAttackMessage(string characterName);
         string GetDefendMessage(string characterName);

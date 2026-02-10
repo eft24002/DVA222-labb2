@@ -31,7 +31,7 @@ namespace RpgCharacters
             Intelligence = intelligence;
             MaxHp = maxHp;
 
-            victoryM = victoryMessage?.Length >0 ? victoryMessage : new[] {$"{Name} celebrates!"};
+            victoryM = victoryMessage?.Length > 0 ? victoryMessage : new[] {$"{Name} celebrates!"};
         }
 
         public string GetVictoryMessage(Random rng)
