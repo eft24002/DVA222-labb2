@@ -5,7 +5,7 @@ namespace RpgCharacters
     public sealed class Character
     {
         private double xp;
-        private double hp; //kan inte hp vara en int?
+        private int hp; 
 
         public string Name { get; }
         public IRace Race { get; }
@@ -15,11 +15,14 @@ namespace RpgCharacters
 
         public int Hp
         {
-            get => (int)hp;//då slipper vi konvertera varje gång vi vill skriva ut hp
+            get => hp;
             set
             {
-                if (value < 0 || value > MaxHp)
-                    throw new ArgumentOutOfRangeException(nameof(Hp), $"HP must be between 0 and {MaxHp}.");
+                if (value < 0 )
+                    hp = 0;
+                else if (value > MaxHp)
+                    hp = MaxHp;
+                else        
                 hp = value;
             }
         }
